@@ -14,9 +14,14 @@ def decode():
         old_ord = ord(i) - 4
         ls.append(chr(old_ord))
     print(''.join(ls))
-    
-choice = int(input("Do you want to Encode(1) or decode(2): "))
-if choice == 1:
-    encode()
-else:
-    decode()    
+a = True
+while a:    
+    choice = int(input("Do you want to Encode(1) or decode(2) or exit(0): "))
+    if choice == 1:
+        encode()
+    elif choice == 2:
+        decode()
+    elif choice == 0:
+        a = False
+    else:
+        print("Wrong choice!!")
